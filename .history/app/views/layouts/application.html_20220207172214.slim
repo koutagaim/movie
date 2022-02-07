@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+      | Movie
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    link[rel="stylesheet" type="text/css" href="/app/views/themes/progress1.css"]
+  body
+    nav.navbar.navbar-black.bg-light
+      span.navbar-brand.mb-0.h1
+        | Movie kannsouu
+    
+        <!-- #splash   
+         #splash_text
+        #container -->
+    = yield  
+    nav.navbar.navbar-expand.navbar-dark.bg-info.fixed-bottom
+        nav.navbar-brand
+          | Made by Murakoshi Kouta
+          script[src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"]
+          script[src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"]
+          script[src="/app/views/themes/progress.js"]

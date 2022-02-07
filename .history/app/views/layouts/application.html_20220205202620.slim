@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title
+      | Movie
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    nav.navbar.navbar-light.bg-light
+      span.navbar-brand.mb-0.h1
+        | Movie kannsouu
+        
+    = yield
+    nav.navbar.navbar-expand.navbar-dark.bg-info.fixed-bottom
+        nav.navbar-brand
+          | Made by Murakoshi Kouta

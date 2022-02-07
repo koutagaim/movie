@@ -1,0 +1,13 @@
+h1 感想の新規登録
+
+.nav.justify-content-end
+  = link_to '一覧', tasks_path, class: 'nav-link'
+
+= form_with model: @theme, local: true do |f|
+  .form-group 
+     = f.label :name
+     = f.text_field :name, class: 'form-control', id: 'theme_name'
+  .form-gruop
+    = f.label :description
+    = f.text_area :description, row: 12, class: 'form-control', id: 'theme_description'
+  = f.submit nil, class: 'btn btn-success'
