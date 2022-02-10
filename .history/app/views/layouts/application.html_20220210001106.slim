@@ -20,9 +20,20 @@ html
          #splash_text -->
         <!-- #container -->
     = yield  
-    nav.navbar.navbar-expand.navbar-dark.bg-info.fixed-bottom
-          a.navbar-brand href="#"  映画感想ドットコム
-          a.navbar-brand href="themes_new_path"  新規登録
+  nav.navbar.navbar-expand.navbar-dark.bg-info.fixed-bottom
+    　a.navbar-brand[href="#"]
+    　| 映画感想ドットコム
+  　ul.navbar-nav
+    　li.nav-item
+      　a.nav-link[href="#"]
+        | ホーム
+    li.nav-item
+      a.nav-link.active[href="#"]
+        | 食事
+    li.nav-item
+      a.nav-link[href="#"]
+        | 予約
+          
           script[src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"]
           script[src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"]
           script[src="/app/views/themes/progress.js"]

@@ -12,17 +12,18 @@ html
     nav.navbar.navbar-black.bg-light
       span.navbar-brand.mb-0.h1
         | Movie kannsouu
-    .container
-     - if flash.notice.present?
-       .alert.alert-success= flash.notice
     
         <!-- #splash   
          #splash_text -->
         <!-- #container -->
     = yield  
     nav.navbar.navbar-expand.navbar-dark.bg-info.fixed-bottom
-          a.navbar-brand href="#"  映画感想ドットコム
-          a.navbar-brand href="themes_new_path"  新規登録
+        nav.navbar-brand
+          | Made by Murakoshi Kouta
+          .container
+          = link_to root_path do
+            span
+              = image_tag "/app/assets/images/ggdolls.jpg", class: "navbar-brand"
           script[src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"]
           script[src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"]
           script[src="/app/views/themes/progress.js"]

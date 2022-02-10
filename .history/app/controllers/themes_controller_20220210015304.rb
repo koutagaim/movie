@@ -19,15 +19,8 @@ class ThemesController < ApplicationController
   end
 
   def edit
-    @theme = Theme.find(params[:id])
   end
-  
-  def update
-    theme = Theme.find(params[;id])
-    theme.update(theme_params)
-    redirect_to themes_url, notice: "タスク「#{theme.name}」を更新しました"
-  end
-  
+
   private
   def theme_params
     params.require(:theme).permit(:name, :description)

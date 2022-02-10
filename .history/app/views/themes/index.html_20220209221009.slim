@@ -1,0 +1,18 @@
+h1 感想一覧
+
+= link_to '新規登録', new_theme_path, class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th= Theme.human_attribute_name(:name)
+      th= Theme.human_attribute_name(:created_at)
+      th
+  tbody
+    - @themes.each do |theme|
+      tr
+        td= link_to theme.name, theme
+        td= theme.created_at
+        
+

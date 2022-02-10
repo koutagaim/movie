@@ -1,5 +1,5 @@
 class ThemesController < ApplicationController
-  protect_from_forgery with: :exception 
+  # protect_from_forgery with: :exception 
   def index
     @themes = Theme.all
   end
@@ -11,7 +11,6 @@ class ThemesController < ApplicationController
   end  
 
   def show
-    @theme = Theme.find(params[:id])
   end
 
   def new
@@ -19,15 +18,8 @@ class ThemesController < ApplicationController
   end
 
   def edit
-    @theme = Theme.find(params[:id])
   end
-  
-  def update
-    theme = Theme.find(params[;id])
-    theme.update(theme_params)
-    redirect_to themes_url, notice: "タスク「#{theme.name}」を更新しました"
-  end
-  
+
   private
   def theme_params
     params.require(:theme).permit(:name, :description)

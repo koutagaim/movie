@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # root to: 'themes#prottype'
-  root to: 'themes#index'
+  root to: 'themes#prottype'
   resources :themes
   get '/app/views/themes/progress.js' => 'themes#progress'
   get '/app/views/themes/progress1.css' => 'themes#progress1'
