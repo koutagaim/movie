@@ -11,3 +11,6 @@ Yahoo!映画を参考に映画の投稿サイトを作成中。 https://movies.y
 
 ## 開発日記
 文字化けしてしまったため、今までのが全てやり直し
+migareionファイルにcharacter,bestceneのカラムを追加。しかし、詳細ボタンで表示されず。。原因を追求中。javascriptもassets以下に入れないといけないことが発覚。原因を追求。その前に基本的な機能は実装したい。
+[![Image from Gyazo](https://i.gyazo.com/82e478b84c15e7a86bd7e7bf1840b00f.png)](https://gyazo.com/82e478b84c15e7a86bd7e7bf1840b00f)  
+
