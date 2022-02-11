@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2022_02_03_135118) do
   create_table "themes", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.text "character"
+    t.text "bestscene"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # root to: 'themes#prottype'
   root to: 'themes#index'
   resources :themes
-  get '/app/views/themes/progress.js' => 'themes#progress.js'
+  get '/app/views/themes/progress.js' => 'javascripts#progress.js'
   get '/app/views/themes/progress1.css' => 'themes#progress1.css'
   get 'app/views/themes/new' => 'themes#new'
   # get '/app/views/themes/new1.html.erb' => 'themes#new1'

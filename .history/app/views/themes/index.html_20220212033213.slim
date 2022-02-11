@@ -23,7 +23,7 @@ html
     tr
       th= Theme.human_attribute_name(:name)
       th= Theme.human_attribute_name(:description)
-      th= Theme.human_attribute_name(:character)
+      th= Theme.human_attribute_name(:charactername)
       th= Theme.human_attribute_name(:bestscene)
       th
     
@@ -32,7 +32,7 @@ html
       tr
         td= link_to theme.name, theme
         td= theme.created_at
-        td= theme.character
+        td= theme.charactername
         td= theme.bestscene
         td
          = link_to '編集', edit_theme_path(theme), class: 'btn btn-primary'

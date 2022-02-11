@@ -12,13 +12,13 @@ table.table.table-hover
       td= @theme.name
     tr
       th= Theme.human_attribute_name(:説明)
-      td= (simple_format(h(@theme.description), {}, sanitize: false, wrapper_tag: "div"))
+      td= auto_link(simple_format(h(@theme.description), {}, sanitize: false, wrapper_tag: "div"))
     tr
       th= Theme.human_attribute_name(:作成時)
       td= @theme.created_at
     tr
-      th= Theme.human_attribute_name(:キャラクター)
-      td= @theme.character
+      th= Theme.human_attribute_name(:キャラクターネーム)
+      td= @theme.charactername
     tr
       th= Theme.human_attribute_name(:ベスト)
       td= @theme.bestscene
@@ -28,4 +28,3 @@ table.table.table-hover
 
 = link_to '編集', edit_theme_path, class: 'btn btn-primary mr-3'
 = link_to '削除', @theme, method: :delete, data: { confirm: "タスク「#{@theme.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
-= link_to '編集', new_theme_path, class: 'btn btn-success mr-3'
