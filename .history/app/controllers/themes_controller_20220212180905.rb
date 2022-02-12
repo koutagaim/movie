@@ -7,7 +7,7 @@ class ThemesController < ApplicationController
   def create
     @theme = Theme.new(theme_params)
     if @theme.save
-      redirect_to @theme, notice: "感想「#{@theme.name}」を登録しました"
+      redirect_to @theme, notice: "感想「#{theme.name}」を登録しました"
     else
       render :new
     end
