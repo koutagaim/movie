@@ -1,0 +1,19 @@
+h1 ä¥ëzÇÃêVãKìoò^Ç≈Ç∑
+
+.nav.justify-content-end
+  = link_to 'àÍóó', themes_path, class: 'nav-link'
+
+= form_with model: @theme, local: true do |f|
+  .form-group 
+     = f.label :name
+     = f.text_field :name, class: 'form-control', id: 'theme_name'
+  .form-gruop
+    = f.label :description
+    = f.text_area :description, row: 12, class: 'form-control', id: 'theme_description'
+  .form-group 
+    = f.label :chracter
+    = f.text_field :character, row: 1,class: 'form-control', id: 'theme_character'
+  .form-group 
+    = f.label :bestscene
+    = f.text_field :bestscene, class: 'form-control', id: 'theme_bestscene' 
+  = f.submit nil, class: 'btn btn-success'
