@@ -4,6 +4,6 @@ PROCEDURE DIVISION.
 MAIN SECTION.
 
 
-/繧ｳ繝ｳ繝代う繝ｫ譁ｹ豕苗obc -x --free hello.cob
+/コンパイル方法cobc -x --free hello.cob
   DISPLAY 'HELLO WORLD!!'.
 STOP RUN.
