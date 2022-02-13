@@ -5,7 +5,7 @@ class Theme < ApplicationRecord
     validates :description, presence: true
     validates :character, presence: true
     validates :bestscene, presence: true
-    validate :dontradical
+    validates :dontradical
 
     private
     def dontradical

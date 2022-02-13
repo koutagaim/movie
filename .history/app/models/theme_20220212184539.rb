@@ -5,14 +5,14 @@ class Theme < ApplicationRecord
     validates :description, presence: true
     validates :character, presence: true
     validates :bestscene, presence: true
-    validate :dontradical
+    validates :dontradical
 
     private
     def dontradical
-        errors.add(:description, 'éŽæ¿€ãªç™ºè¨€ã¯ã‚„ã‚ã¾ã—ã‚‡ã†') if description&.include?('ããã¤ã¾ã‚“ãªã„')       
+        errors.add(:description, '‰ßŒƒ‚È”­Œ¾‚Í‚â‚ß‚Ü‚µ‚å‚¤') if description&.include?('‚­‚»‚Â‚Ü‚ñ‚È‚¢')       
     end
 
     def set_nameless_name
-        self.name = 'åå‰ãªã—' if name.blank?
+        self.name = '–¼‘O‚È‚µ' if name.blank?
     end
 end
