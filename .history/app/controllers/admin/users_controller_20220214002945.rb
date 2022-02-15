@@ -1,13 +1,12 @@
 class Admin::UsersController < ApplicationController
-  # before_action :require_admin
-  # before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
@@ -15,33 +14,29 @@ class Admin::UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find()
   end
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to admin_user_path(@user), notice: "ãƒ¦ãƒ¼ã‚¶ã€Œ#{@user.name}ã€ã‚’ç™»éŒ²ã—ã¾ã—ãŸã€‚"
+      redirect_to admin_user_path(@user), notice: "ƒ†[ƒUu#{@user.name}v‚ð“o˜^‚µ‚Ü‚µ‚½B"
     else
       render :new
     end
   end
 
   def update
-    @user = User.find(params[:id])
-
     if @user.update(user_params)
-      redirect_to admin_user_path(@user), notice: "ãƒ¦ãƒ¼ã‚¶ã€Œ#{@user.name}ã€ã‚’æ›´æ–°ã—ã¾ã—ãŸã€‚"
+      redirect_to admin_user_path(@user), notice: "ƒ†[ƒUu#{@user.name}v‚ðXV‚µ‚Ü‚µ‚½B"
     else
       render :new
     end
   end
 
   def destroy
-    @user = User.find(params[:id])
     @user.destroy
-    redirect_to admin_users_url, notice: "ãƒ¦ãƒ¼ã‚¶ã€Œ#{@user.name}ã€ã‚’å‰Šé™¤ã—ã¾ã—ãŸã€‚"
+    redirect_to admin_users_url, notice: "ƒ†[ƒUu#{@user.name}v‚ðíœ‚µ‚Ü‚µ‚½B"
   end
 
   private

@@ -15,7 +15,7 @@ class ThemesController < ApplicationController
 
   
   def show
-    @theme = Theme.find(params[:id])
+    @theme = Theme.find(params[:name])
   end
 
   def new

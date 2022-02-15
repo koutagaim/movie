@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
   end
-
   root to: 'themes#index'
   resources :themes
   get '/app/views/themes/progress.js' => 'themes#progress.js'
