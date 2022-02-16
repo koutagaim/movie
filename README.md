@@ -60,16 +60,9 @@ Processing by ThemesController#index as HTML
   Rendered themes/index.html.slim within layouts/application (32.8ms)
 Completed 200 OK in 404ms (Views: 387.1ms | ActiveRecord: 4.6ms)
 ```
-<<<<<<< HEAD
-とターミナルで表示され、実装されず。現在も原因究明中。
-=======
-
-
-
 とターミナルで表示され、実装されず。現在も原因究明中。そしてja.ymlも翻訳されないエラーが見つかる。原因を究明中。
 
 
 
 
 
->>>>>>> c9f956d6ae0ee77f19ec3fe164d4bbb261dfbee2
