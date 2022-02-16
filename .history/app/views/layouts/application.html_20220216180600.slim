@@ -6,12 +6,9 @@ html
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = stylesheet_link_tag "progress/progress", :media => "all"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'progress/progress.js'
     <!-- link[rel="stylesheet" type="text/css" href="/app/views/themes/progress1.css"] -->
-    <!-- link data-turbolinks-track="reload" href="/assets/styleheets/progress/progress.css?body=1" media="all" rel="stylesheet" / -->
-   
+    link data-turbolinks-track="reload" href="/assets/styleheets/progress/progress.css?body=1" media="all" rel="stylesheet" /
   body
     nav.navbar.navbar-black.bg-light
       span.navbar-brand.mb-0.h1
