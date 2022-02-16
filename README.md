@@ -38,11 +38,17 @@ progressbarの実装のために[RailsでJavaScriptが読み込まれない時�
 [![Image from Gyazo](https://i.gyazo.com/a8ded7e24908fd17c65c076b8c0eedde.png)](https://gyazo.com/a8ded7e24908fd17c65c076b8c0eedde)
 [![Image from Gyazo](https://i.gyazo.com/55f54d3a0be646fe540f264797e6f665.png)](https://gyazo.com/55f54d3a0be646fe540f264797e6f665)
 という画面が出たので指示通りにconfig/initializer/assets.rbに
+
 ```
 config/initializer/assets.rb
 Rails.application.config.assets.precompile += %w( progress/progress.js )
-Rails.application.config.assets.precompile += %w( progress/progress.css )```
-と記述してみたものの、
+Rails.application.config.assets.precompile += %w( progress/progress.css )
+```
+
+
+と記述したものの
+
+
 ```
 Started GET "/" for ::1 at 2022-02-16 18:22:14 +0900
    (0.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
@@ -54,6 +60,12 @@ Processing by ThemesController#index as HTML
   Rendered themes/index.html.slim within layouts/application (32.8ms)
 Completed 200 OK in 404ms (Views: 387.1ms | ActiveRecord: 4.6ms)
 ```
-とターミナルで表示され、実装されず。現在も原因究明中。
+
+
+
+とターミナルで表示され、実装されず。現在も原因究明中。そしてja.ymlも翻訳されないエラーが見つかる。原因を究明中。
+
+
+
 
 
