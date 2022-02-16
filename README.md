@@ -33,3 +33,27 @@ migareionファイルにcharacter,bestceneのカラムを追加。しかし、�
 [![Image from Gyazo](https://i.gyazo.com/82e478b84c15e7a86bd7e7bf1840b00f.png)](https://gyazo.com/82e478b84c15e7a86bd7e7bf1840b00f)
 
 userモデルを作成。adminやsession、cookieなども改めて詳しく知ることができた。ここからログイン機能について作成していく。2022年2月13日
+
+progressbarの実装のために[RailsでJavaScriptが読み込まれない時の対処方法を現役エンジニアが解説【初心者向け】](https://techacademy.jp/magazine/41310#3)や[Rails 使用するCSSを指定する](https://keruuweb.com/rails-%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8Bcss%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/)を調べて実行して
+[![Image from Gyazo](https://i.gyazo.com/a8ded7e24908fd17c65c076b8c0eedde.png)](https://gyazo.com/a8ded7e24908fd17c65c076b8c0eedde)
+[![Image from Gyazo](https://i.gyazo.com/55f54d3a0be646fe540f264797e6f665.png)](https://gyazo.com/55f54d3a0be646fe540f264797e6f665)
+という画面が出たので指示通りにconfig/initializer/assets.rbに
+```
+config/initializer/assets.rb
+Rails.application.config.assets.precompile += %w( progress/progress.js )
+Rails.application.config.assets.precompile += %w( progress/progress.css )```
+と記述してみたものの、
+```
+Started GET "/" for ::1 at 2022-02-16 18:22:14 +0900
+   (0.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /Users/murakoshikouta/.rbenv/versions/2.6.8/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by ThemesController#index as HTML
+  Rendering themes/index.html.slim within layouts/application
+  Theme Load (0.7ms)  SELECT "themes".* FROM "themes"
+  ↳ app/views/themes/index.html.slim:31
+  Rendered themes/index.html.slim within layouts/application (32.8ms)
+Completed 200 OK in 404ms (Views: 387.1ms | ActiveRecord: 4.6ms)
+```
+とターミナルで表示され、実装されず。現在も原因究明中。
+
+
